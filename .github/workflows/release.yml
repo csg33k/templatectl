@@ -1,8 +1,11 @@
 # .github/workflows/release.yml
 
-on:
-  release:
-    types: [created]
+name: Release on templatectl
+
+on: 
+  create:
+    tags: 
+      - '*'
 
 jobs:
   release:
