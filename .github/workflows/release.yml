@@ -3,6 +3,8 @@
 name: Release on templatectl
 
 on: 
+  release:
+    types: [created]
   create:
     tags: 
       - '*'
@@ -21,6 +23,8 @@ jobs:
         uses: rust-build/rust-build.action@v1.4.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UPLOAD_MODE: release
+          MINIFY: "yes"
         with:
           RUSTTARGET: ${{ matrix.target }}
           EXTRA_FILES: "README.md LICENSE"
