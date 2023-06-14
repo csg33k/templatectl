@@ -5,9 +5,9 @@ name: Release on templatectl
 on: 
   release:
     types: [created]
-  create:
-    tags: 
-      - '*'
+#  create:
+#    tags: 
+#      - '*'
 
 jobs:
   release:
