@@ -20,4 +20,4 @@ jobs:
 
       # Run build
       - name: build_script
-        run: cargo build --verbose 
+        run: cargo build 
